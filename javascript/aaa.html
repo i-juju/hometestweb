@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+    <script>   
+       function Student(name, korean, math, english, science) {
+            this.name = name,
+            this.korean = korean,
+            this.math = math,
+            this.english = english,
+            this.science = science
+ 
+            return this
+        }
+        
+        Student.prototype.getSum = function() {
+            return this.korean + this.math + this.english + this.science;
+        }
+        
+        Student.prototype.getAverage = function() {
+            return this.getSum() / 4;
+        }
+        
+        Student.prototype.getRank = function() {
+            var length = students.length,
+                rank;
+            for(var i = 0; i < length; i++) {
+                if(students[i].name == this.name) {
+                    rank = i;
+                    break;
+                }
+            }
+            
+            return rank + 1 + '등';
+        }
+        
+        Student.prototype.toString = function() {
+            return 'name : ' + this.name + ' | total : ' + this.getSum() + ' | average : ' + this.getAverage() + ' | rank : ' + this.getRank();
+        }
+        
+        
+        
+        // 학생 정보 배열을 만듭니다.
+        var students = [];
+        students.push(new Student('Kim', 95, 98, 98, 95));
+        students.push(new Student('Park', 82, 98, 96, 98));
+        students.push(new Student('Lee', 76, 96, 94, 90));
+        students.push(new Student('Woo', 100, 100, 100, 100));
+        students.push(new Student('Yoo', 23, 44, 25, 100));
+        
+        students.sort(function(a, b) { // 평균 기준으로 sort
+            return b.getAverage() - a.getAverage();
+        });
+        
+        for(var i in students) {
+            console.log(students[i].toString());
+            console.log('---------------------------------------------');
+        }
+                
+    </script>
+</body>
+</html>

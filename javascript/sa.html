@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	var today=new Date();
+	var hourNow= todey.getHours();
+	var greeting;
+
+	//현재 시간에 따라 적당한 인사말을 출력합니다
+	if (hourNow>18) {greeting="Good evening";}
+	else if (hourNow>12) {greeting="Good afternoon";}
+	else if (hourNow>0) {greeting="Welcome";}
+
+	alert(greeting);
+	</script>
+</body>
+</html>

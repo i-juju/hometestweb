@@ -1,0 +1,13 @@
+body{background-color:#003EFF; font-family:Arial,"Thebuchet Ms", sans-serif; margin:0px;}
+
+	header#page-header{background-color:#ffffff; color:black; margin:0px; text-align:left; padding:5px; height:40px; width:100%;}
+
+	h1{margin:0px;}
+	
+	/*display속성 table-cell 테이블의 셀처럼 배치함*/
+
+	.page-main{display:table-cell; color:#fff; 
+		text-align:center; font-size: 30px;
+		padding:15px; height: 500px; width:100%;}
+
+	footer.page-footer{background-color:#000000; color:#ffffff; text-align:center; padding:10px; margin:0px 0px 0px 0px; height:40px; width:100%; }
