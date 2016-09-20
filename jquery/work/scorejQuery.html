@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="score.js"></script>
+
+</head>
+<body>
+	<p><h1>성적출력</h1></p>
+	<form name=frm>
+		<table border="1" bgcolor="#ccffff" width="80%">
+			<tr colspan="8"><td>
+				성명 : <input type="text" id="sName" size="10">
+				국어 : <input type="text" id="snum1" size="3">
+				영어 : <input type="text" id="snum2" size="3">
+				수학 : <input type="text" id="snum3" size="3">
+				과학 : <input type="text" id="snum4" size="3">
+
+				<input type="button" value="입력" id="fn" onclick="main(sName.value, snum1.value, snum2.value, num3.value, snum4.value)"> 
+				<input type="button" value="Sample" onclick="sample_date()"> 
+			</td></tr>
+			<tr colspan="8">
+				<td >
+					정렬하기 : 
+					국어<input type="radio" name="chkradio" value="kor" checked="checked">
+					영어<input type="radio" name="chkradio" value="eng">
+					수학<input type="radio" name="chkradio" value="mat">
+					과학<input type="radio" name="chkradio" value="sco">
+					총점<input type="radio" name="chkradio" value="tot">
+					평균<input type="radio" name="chkradio" value="avg">
+				</td>
+			</tr>
+
+			<table id=tem></table>
+		</form>
+	</body>
+	</html>
